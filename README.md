@@ -38,3 +38,9 @@ Follows the [youtube video](https://www.youtube.com/watch?v=eAPmXQ0dC7Q) tutoria
 
     ```pip install -e .```
     > -e means editable, we won't have to install it again after making changes
+
+1. Download and place the *Browser Web Driver* (I have used ChromeWebDriver) in known direcory and insert the path in file ``test_index_e2e.py``
+
+## Next Step
+
+Use GitLab CI/CD build, tests and deployment on this project.
