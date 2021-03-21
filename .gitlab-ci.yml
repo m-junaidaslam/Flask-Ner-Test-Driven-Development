@@ -1,7 +1,7 @@
 image: selenium/standalone-chrome:latest
 
 before_script:
-  - USER root
+  # - USER root
   - wget https://bootstrap.pypa.io/get-pip.py
   - python3 get-pip.py
   - python3 --version
