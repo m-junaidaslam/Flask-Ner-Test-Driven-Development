@@ -9,5 +9,5 @@ stages:
 test:
   stage: test
   script:
-    - python app.py
+    # - python app.py
     - python -m pytest
