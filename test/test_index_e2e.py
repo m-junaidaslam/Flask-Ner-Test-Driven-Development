@@ -5,7 +5,6 @@ class E2ETests(unittest.TestCase):
 
     def setUp(self):
         # self.driver = webdriver.Chrome(executable_path=r'C:\Users\junai\Documents\Workspaces\Flask\flask-ner\Applications\chromedriver.exe')
-        # self.driver.get('http://localhost:5000')
         """Start web driver"""
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument('--no-sandbox')
@@ -13,6 +12,9 @@ class E2ETests(unittest.TestCase):
         chrome_options.add_argument('--disable-gpu')
         self.driver = webdriver.Chrome(chrome_options=chrome_options)
         self.driver.implicitly_wait(10)
+        # self.driver.get('https://www.oursky.com/')
+        self.driver.get('http://localhost:5000')
+
     
     def tearDown(self):
         self.driver.quit()
