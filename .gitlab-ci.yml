@@ -1,11 +1,6 @@
-image: selenium/standalone-chrome:latest
+image: joyzoursky/python-chromedriver:latest
 
 before_script:
-  # - USER root
-  - wget https://bootstrap.pypa.io/get-pip.py
-  - python3 --version
-  - apt-get install python3-distutils
-  - python3 get-pip.py
   - pip install -r requirements.txt
 
 stages:
@@ -14,4 +9,4 @@ stages:
 test:
   stage: test
   script:
-    - python3 -m pytest
+    - python -m pytest
