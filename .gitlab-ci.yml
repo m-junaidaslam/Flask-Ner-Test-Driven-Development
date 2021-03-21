@@ -1,7 +1,10 @@
 image: selenium/standalone-chrome:latest
 
 before_script:
-  - python --version
+  - USER root
+  - RUN wget https://bootstrap.pypa.io/get-pip.py
+  - RUN python3 get-pip.py
+  - python3 --version
   - pip install -r requirements.txt
 
 stages:
@@ -10,4 +13,4 @@ stages:
 test:
   stage: test
   script:
-    - python -m pytest
+    - python3 -m pytest
