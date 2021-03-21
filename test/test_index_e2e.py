@@ -5,7 +5,7 @@ class E2ETests(unittest.TestCase):
 
     def setUp(self):
         # self.driver = webdriver.Chrome(executable_path=r'C:\Users\junai\Documents\Workspaces\Flask\flask-ner\Applications\chromedriver.exe')
-        """Start web driver"""
+        # """Start web driver"""
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument('--no-sandbox')
         chrome_options.add_argument('--headless')
