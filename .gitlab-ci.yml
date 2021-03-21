@@ -10,4 +10,4 @@ stages:
 test:
   stage: test
   script:
-    - pytest
+    - python -m pytest
