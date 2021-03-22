@@ -8,6 +8,7 @@ app = Flask(__name__)
 ner = spacy.load("en_core_web_sm")
 ner = NamedEntityClient(ner)
 
+
 @app.route('/')
 def index():
     return render_template('index.html')

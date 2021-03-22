@@ -55,6 +55,7 @@ const init = async (userInput) => {
     })
 }
 
+
 window.onload = (event) => {
     init();
 }

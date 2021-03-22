@@ -4,7 +4,8 @@ class NamedEntityClient:
 
     def get_ents(self, sentence):
         doc = self.model(sentence)
-        entities = [{'ent': ent.text, 'label': self.map_label(ent.label_)} for ent in doc.ents]
+        entities = [{'ent': ent.text, 'label': self.map_label(
+            ent.label_)} for ent in doc.ents]
         return {'ents': entities, 'html': ''}
 
     @staticmethod

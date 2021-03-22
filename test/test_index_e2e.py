@@ -4,14 +4,14 @@ from flask import request
 
 from app import app
 
+
 class E2ETests(unittest.TestCase):
 
     def setUp(self):
         # self.driver = webdriver.Chrome(executable_path=r'C:\Users\junai\Documents\Workspaces\Flask\flask-ner\Applications\chromedriver.exe')
         # """Start web driver"""
         # with app.test_client() as client:
-            # response = client.post('/ner', json={"sentence": "Steve Malkmus is in a good band."})
-            
+        # response = client.post('/ner', json={"sentence": "Steve Malkmus is in a good band."})
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument('--no-sandbox')
         chrome_options.add_argument('--headless')
@@ -21,7 +21,6 @@ class E2ETests(unittest.TestCase):
         # self.driver.get('https://www.oursky.com/')
         self.driver.get(app)
 
-    
     def tearDown(self):
         self.driver.quit()
 
